@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Deep Future Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Deep Future Card Generator</h1>
+  <form id="cardForm">    
+    Card Size based on ppi:<br>
+    <label><input type="radio" name="cardSize" value="poker">Poker (2.5"x3.5")</label>
+    <label><input type="radio" name="cardSize" value="a7">A7 (2.9"x4.1")</label>
+    <label><input type="radio" name="cardSize" value="index">Half Index Card (3"x4")</label>
+    <br>Card Border:
+    <label><input type="radio" name="cardBorderToggle" value="on">On</label>
+    <label><input type="radio" name="cardBorderToggle" value="off">Off</label>
+    <br>Card #:
+    <label><input type="radio" name="cardNumber" value="1">1</label>
+    <label><input type="radio" name="cardNumber" value="2">2</label>
+    <label><input type="radio" name="cardNumber" value="3">3</label>
+    <label><input type="radio" name="cardNumber" value="4">4</label>
+    <label><input type="radio" name="cardNumber" value="5">5</label>
+    <label><input type="radio" name="cardNumber" value="6">6</label>
+    <br>Suit:
+    <label><input type="radio" name="suit" value="sun"><img src="img/sun61x61px.png" width="20" height"20" align="bottom" id="sunIcon"></label>
+    <label><input type="radio" name="suit" value="moon"><img src="img/moon61x61px.png" width="20" height"20" align="bottom" id="moonIcon"></label>
+    <label><input type="radio" name="suit" value="heart"><img src="img/heart62x63px.png" width="20" height"20" align="bottom" id="heartIcon"></label>
+    <label><input type="radio" name="suit" value="skull"><img src="img/skull73x61px.png" width="24" height"20" align="bottom" id="skullIcon"></label>
+    <label><input type="radio" name="suit" value="hand"><img src="img/hand61x61px.png" width="20" height"20" align="bottom" id="handIcon"></label>
+    <label><input type="radio" name="suit" value="boot"><img src="img/boot55x61px.png" width="20" height"20" align="bottom" id="bootIcon"></label>
+    <br>Type:
+    <label><input type="radio" name="cardType" value="blank">Blank</label>
+    <label><input type="radio" name="cardType" value="world">World</label>
+    <label><input type="radio" name="cardType" value="tech">Tech</label>
+    <label><input type="radio" name="cardType" value="civilisation">Civilisation</label>
+  </form>
+  <div id="era"></div>
+  <div id="titles"></div>
+  <form id="techsButtonsForm"></form>
+  <div id="message">If you can read this, something went wrong!</div>
+  <button id="renderCardGo">Render Card</button><br>
+  <br><canvas id="canvas" width="470" height="635"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
